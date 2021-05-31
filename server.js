@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("./assets/js/index.js", (req, res) => {
-    res.sendFile(path.join(__dirname, "./assets/js/index.js"))
+app.get("/public/index.js", (req, res) => {
+    res.sendFile(path.join(__dirname, "/public/index.js"))
 });
 
-app.get("./assets/css/style.css", (req, res) => {
-    res.sendFile(path.join(__dirname, "./assets/css/style.css"))
+app.get("/public/style.css", (req, res) => {
+    res.sendFile(path.join(__dirname, "/public/style.css"))
 });
 
 // app.get("*", (req, res) => {

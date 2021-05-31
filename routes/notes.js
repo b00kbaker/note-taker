@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
+
 // API calls to backend (create data/store/retrieve old data)
 
 module.exports = (app) => {
@@ -30,22 +31,4 @@ module.exports = (app) => {
       });
     });
   });
-  
-//   DELETE note from viewing on Front End and from Back End db
-  app.delete("/api/notes/:id", (req, res) => {
-    let id = req.params.id;
-    fs.readFile("./db/db.json", (err, data) => {
-      data = JSON.parse(data);
-      data = data.filter((text) => text.id != id);
-
-      fs.writeFile("./db/db.json", JSON.stringify(data), (err) => {
-        if (err) console.log(err);
-        else {
-          console.log("note deleted\n");
-          res.json({});
-        }
-      });
-    });
-  });
-  
-};
+};  
