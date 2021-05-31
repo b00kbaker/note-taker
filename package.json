@@ -1,7 +1,7 @@
 {
-  "name": "js",
+  "name": "note-taker",
   "version": "1.0.0",
-  "description": "Note Taker",
+  "description": "A note taker that has the capability to edit or delete prior docs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,12 +11,17 @@
     "url": "git+https://github.com/b00kbaker/note-taker.git"
   },
   "keywords": [
-    "note"
+    "note",
+    "node",
+    "CRUD"
   ],
   "author": "Caitlin Murphy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/b00kbaker/note-taker/issues"
   },
-  "homepage": "https://github.com/b00kbaker/note-taker#readme"
+  "homepage": "https://github.com/b00kbaker/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
